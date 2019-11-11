@@ -10,18 +10,22 @@
 }
 
 img{
-    border-radius: 25%;
+    border-radius: 7%;
 }
 
+a, #signupButton{
+    color: black;
+}
 .top-buffer { margin-top:20px; }
+.top-buffer2 { margin-top:250px; }
 
 
 /* https://www.youtube.com/watch?v=fBRzD6dwJfw */
 
 body{
-    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background: linear-gradient(-45deg, rgb(155, 120, 109), #be8c9fb0, rgb(65, 180, 223), rgb(82, 226, 193));
     background-size: 400% 400%;
-    animation: change 10s ease-in-out;
+    animation: change 10s infinite;
 }
 
 @keyframes change {
