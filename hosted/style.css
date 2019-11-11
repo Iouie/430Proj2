@@ -13,7 +13,7 @@ img{
     border-radius: 7%;
 }
 
-a, #signupButton{
+a, #signupButton, #loginButton{
     color: black;
 }
 .top-buffer { margin-top:20px; }
