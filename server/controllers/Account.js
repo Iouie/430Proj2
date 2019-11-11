@@ -3,16 +3,20 @@ const models = require('../models');
 const Account = models.Account;
 
 const loginPage = (req, res) => {
-  res.render('login', { csrfToken: req.csrfToken() });
+  res.render('login');
 };
 
-// const signupPage = (req, res) => {
-//   res.render('signup', { csrfToken: req.csrfToken() });
-// };
+const signupPage = (req, res) => {
+  res.render('signup');
+};
 
 const logout = (req, res) => {
   req.session.destroy();
   res.redirect('/');
+};
+
+const myPage = (req, res) => {
+  res.render('user', {name: req.session.account.username});
 };
 
 const login = (request, response) => {
@@ -25,7 +29,7 @@ const login = (request, response) => {
 
   if (!username || !password) {
     return res.status(400).json({
-      error: 'RAWR! All fields are required',
+      error: 'Error: All fields are required',
     });
   }
 
@@ -99,22 +103,12 @@ const signup = (request, response) => {
   });
 };
 
-const getToken = (request, response) => {
-  const req = request;
-  const res = response;
-
-  const csrfJSON = {
-    csrfToken: req.csrfToken(),
-  };
-
-  res.json(csrfJSON);
-};
 
 module.exports = {
   loginPage,
   login,
   logout,
-  // signupPage,
+  myPage,
+  signupPage,
   signup,
-  getToken,
 };

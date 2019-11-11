@@ -8,8 +8,8 @@
 
 <body class='logsign-page'>
   <div class='container-fluid'>
-    <section id='login' class='row'>
-      <form id='loginForm' name='loginForm' action='/login' method='POST' class='mainForm'></form>
+    <section id='signup' class='row'>
+      <form id='signupForm' name='signupForm' action='/signup' method='POST' class='mainForm'></form>
       <div class='greeting'>
         <img class='icon' src='./assets/img/favicon.png' alt='hamburger'>
         <h1>HELLO</h1>
@@ -18,11 +18,14 @@
         <div class='form-group col-xs-4'>
           <input class='field' id='user' type='text' name='username' placeholder='Username' />
         </div>
-        <div class='field' id='password' type='text' name='password' placeholder='Password' />
+        <div class='field' id='pass' type='text' name='pass' placeholder='Password' />
+      </div>
+      <div class ='form-group col-xs-4'>
+          <input class='field' id='pass2' type='text' name='pass2' placeholder='Retype Password' />
       </div>
   </div>
-  <button class='btn btn-secondary rounded-pill' id='loginButton' type='submit'>Sign In</button>
-  <p>Dont have an account? <a href='./signup'>Sign Up</a></p>
+  <button class='btn btn-secondary rounded-pill' id='signupButton' type='submit'>Sign In</button>
+  <p>Have an account? <a href='./login'>Login</a></p>
   </form>
   </section>
   </div>
