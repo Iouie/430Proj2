@@ -16,7 +16,7 @@ const logout = (req, res) => {
 };
 
 const myPage = (req, res) => {
-  res.render('user', {name: req.session.account.username});
+  res.render('user', { name: req.session.account.username });
 };
 
 const login = (request, response) => {
