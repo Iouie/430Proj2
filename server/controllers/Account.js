@@ -43,7 +43,7 @@ const login = (request, response) => {
     req.session.account = Account.AccountModel.toAPI(account);
 
     return res.json({
-      redirect: '/maker',
+      redirect: '/myPage',
     });
   });
 };
@@ -59,13 +59,13 @@ const signup = (request, response) => {
 
   if (!req.body.username || !req.body.pass || !req.body.pass2) {
     return res.status(400).json({
-      error: 'RAWR! All fields are required',
+      error: 'All fields are required',
     });
   }
 
   if (req.body.pass !== req.body.pass2) {
     return res.status(400).json({
-      error: 'RAWR! Passwords do not match',
+      error: 'Passwords do not match',
     });
   }
 
@@ -92,7 +92,7 @@ const signup = (request, response) => {
 
       if (err.code === 11000) {
         return res.status(400).json({
-          error: 'Username already in use.',
+          error: 'Username already taken.',
         });
       }
 
